@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useRef } from "react";
-
+import classes from "./helper/table/Checkbox.module.css";
 import {
   useTable,
   useSortBy,
@@ -222,17 +222,19 @@ const MembersTable = (props) => {
               className="ml-4 mt-3 mr-1 mb-1"
               {...getToggleHideAllColumnsProps()}
             />
-            ToggleAll
+            {/* ToggleAll */}
             {allColumns.map((column) =>
               column.checked ? (
                 <div key={column.id}>
-                  <Form.Check
-                    type="checkbox"
-                    label={column.Header}
-                    id={column.Header + "check"}
-                    className="ml-4 mr-5 mb-1"
-                    {...column.getToggleHiddenProps()}
-                  />
+                  <label className={`ml-4 mr-5 mb-1 ${classes.label}`}>
+                    <input
+                      id={column.Header + "check"}
+                      type="checkbox"
+                      {...column.getToggleHiddenProps()}
+                    />
+                    <span></span>
+                    {column.Header}
+                  </label>
                 </div>
               ) : null
             )}
