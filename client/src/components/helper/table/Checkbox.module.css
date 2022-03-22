@@ -41,6 +41,11 @@
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+.toggle_all:first-child input[type="checkbox"]:not(:checked) + span:before {
+  content: "➖";
+  margin-left: 1px;
+}
+
 .label:hover span {
   background-color: #ccc;
 }

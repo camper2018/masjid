@@ -219,7 +219,7 @@ const MembersTable = (props) => {
           </div>
           <div className={Classes.checkbox_container} ref={filterRef}>
             <Checkbox
-              className="ml-4 mt-3 mr-1 mb-1"
+              className={`${classes.toggle_all} ml-4 mt-3 mr-1 mb-1`}
               {...getToggleHideAllColumnsProps()}
             />
             {/* ToggleAll */}

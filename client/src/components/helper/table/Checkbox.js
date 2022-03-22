@@ -11,7 +11,7 @@ export const Checkbox = React.forwardRef(
 
     return (
       <label className={styles}>
-        <input className={styles} type="checkbox" ref={resolvedRef} {...rest} />
+        <input type="checkbox" ref={resolvedRef} {...rest} />
         <span></span>
         Toggle All
       </label>
